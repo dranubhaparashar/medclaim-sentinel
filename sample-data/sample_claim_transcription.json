@@ -1,0 +1,249 @@
+{
+  "claim": {
+    "claim_no": "CLM-SAMPLE-2025-001",
+    "application_no": "APP-SAMPLE-01",
+    "patient_name": "Ankur Sharma",
+    "policy_no": "POL-DEMO-001",
+    "hospital": "Sparsh Multi Speciality Hospital, Shimla / Atulaya Healthcare, Shimla",
+    "diagnosis": "Pregnancy / antenatal care with thyroid and metabolic screening",
+    "treatment_start": "2024-08-24",
+    "treatment_end": "2025-01-20",
+    "claimed_amount": 18094,
+    "status": "Received"
+  },
+  "documents": {
+    "medical_certificate_page_1.jpeg": {
+      "doc_type": "medical_certificate_or_prescription",
+      "reviewed_text": "Hindi medical reimbursement certificate with handwritten medicine/test references and pregnancy noted from 24/08/2024.",
+      "extracted": {
+        "dates": [
+          "24-08-24",
+          "03-12-24",
+          "20-12-24",
+          "30-12-24",
+          "20-01-25"
+        ],
+        "invoice_numbers": [
+          "A013289",
+          "A014118",
+          "A014582",
+          "A015407",
+          "A015436"
+        ],
+        "pregnancy_noted": true,
+        "identity_candidates": [
+          {
+            "value": "Ankur Sharma",
+            "confidence": 0.99,
+            "source": "reviewed bundled sample evidence"
+          }
+        ]
+      }
+    },
+    "laboratory_test_details.jpeg": {
+      "doc_type": "laboratory_bill_summary",
+      "reviewed_text": "Typed laboratory test schedule from Sparsh Multi Speciality Hospital and Atulaya Healthcare, Shimla. Total ₹6,400.",
+      "extracted": {
+        "test_total": 6400,
+        "dates": [
+          "24-08-24",
+          "23-09-24",
+          "03-10-24",
+          "04-11-24",
+          "21-11-24",
+          "19-01-25"
+        ],
+        "tests": [
+          {
+            "name": "USG/GYNEE SCREENING",
+            "date": "24-08-24",
+            "amount": 400
+          },
+          {
+            "name": "USG/FHR SCREENING",
+            "date": "23-09-24",
+            "amount": 200
+          },
+          {
+            "name": "URINE ROUTINE",
+            "date": "23-09-24",
+            "amount": 50
+          },
+          {
+            "name": "USG-NT/NB SCAN",
+            "date": "03-10-24",
+            "amount": 1200
+          },
+          {
+            "name": "DUAL MARKER",
+            "date": "03-10-24",
+            "amount": 2000
+          },
+          {
+            "name": "USG/FHR SCREENING",
+            "date": "04-11-24",
+            "amount": 200
+          },
+          {
+            "name": "LEVEL 2 USG/ANOMALY SCAN",
+            "date": "21-11-24",
+            "amount": 2000
+          },
+          {
+            "name": "CBC",
+            "date": "19-01-25",
+            "amount": 250
+          },
+          {
+            "name": "FBS",
+            "date": "19-01-25",
+            "amount": 50
+          },
+          {
+            "name": "SUGAR PPBS",
+            "date": "19-01-25",
+            "amount": 50
+          }
+        ],
+        "identity_candidates": [
+          {
+            "value": "Ankur Sharma",
+            "confidence": 0.99,
+            "source": "reviewed bundled sample evidence"
+          }
+        ],
+        "provider": "Sparsh Multi Speciality Hospital, Shimla / Atulaya Healthcare, Shimla"
+      }
+    },
+    "medicine_bill_details.jpeg": {
+      "doc_type": "medicine_bill_summary",
+      "reviewed_text": "Typed medicine-bill schedule from Sparsh Medical Store, Shimla. Eleven bills, total ₹11,694.",
+      "extracted": {
+        "medicine_total": 11694,
+        "invoice_numbers": [
+          "A007806",
+          "A008203",
+          "A009005",
+          "A010150",
+          "A011327",
+          "A012382",
+          "A013289",
+          "A014118",
+          "A014582",
+          "A015407",
+          "A015436"
+        ],
+        "dates": [
+          "24-08-24",
+          "31-08-24",
+          "14-09-24",
+          "03-10-24",
+          "24-10-24",
+          "14-11-24",
+          "03-12-24",
+          "20-12-24",
+          "30-12-24",
+          "20-01-25"
+        ],
+        "medicine_bills": [
+          {
+            "invoice_no": "A007806",
+            "date": "24-08-24",
+            "amount": 1890
+          },
+          {
+            "invoice_no": "A008203",
+            "date": "31-08-24",
+            "amount": 1350
+          },
+          {
+            "invoice_no": "A009005",
+            "date": "14-09-24",
+            "amount": 1460
+          },
+          {
+            "invoice_no": "A010150",
+            "date": "03-10-24",
+            "amount": 1800
+          },
+          {
+            "invoice_no": "A011327",
+            "date": "24-10-24",
+            "amount": 612
+          },
+          {
+            "invoice_no": "A012382",
+            "date": "14-11-24",
+            "amount": 280
+          },
+          {
+            "invoice_no": "A013289",
+            "date": "03-12-24",
+            "amount": 133
+          },
+          {
+            "invoice_no": "A014118",
+            "date": "20-12-24",
+            "amount": 503
+          },
+          {
+            "invoice_no": "A014582",
+            "date": "30-12-24",
+            "amount": 787
+          },
+          {
+            "invoice_no": "A015407",
+            "date": "20-01-25",
+            "amount": 981
+          },
+          {
+            "invoice_no": "A015436",
+            "date": "20-01-25",
+            "amount": 1898
+          }
+        ],
+        "identity_candidates": [
+          {
+            "value": "Ankur Sharma",
+            "confidence": 0.99,
+            "source": "reviewed bundled sample evidence"
+          }
+        ],
+        "provider": "Sparsh Medical Store, Shimla"
+      }
+    },
+    "medical_certificate_page_2.jpeg": {
+      "doc_type": "medical_certificate_or_prescription",
+      "reviewed_text": "Hindi medical certificate with handwritten investigations including HbA1c, thyroid/thyroxine, Vitamin B12 serum and Vitamin D total serum; handwritten total appears ₹763.",
+      "extracted": {
+        "test_total": 0,
+        "dates": [
+          "26-05-25"
+        ],
+        "tests": [
+          {
+            "name": "HbA1c",
+            "amount": 131
+          },
+          {
+            "name": "TSH / Thyroid / Thyroxine test",
+            "amount": 54
+          },
+          {
+            "name": "Thyroxine test",
+            "amount": 54
+          },
+          {
+            "name": "Vitamin B12 Serum",
+            "amount": 131
+          },
+          {
+            "name": "Vitamin D Total Serum",
+            "amount": 393
+          }
+        ],
+        "handwritten_total": 763
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+1. Stop Streamlit with Ctrl+C.
+2. Copy app.py and the medclaim folder from this patch into your medclaim-sentinel project.
+3. Choose Replace the files in the destination.
+4. Do not delete your storage folder.
+5. Start with:
+   powershell.exe -ExecutionPolicy Bypass -File .\run_windows.ps1 -Port 8502
+6. Open Dashboard and expand "Delete or clean up claim entries".

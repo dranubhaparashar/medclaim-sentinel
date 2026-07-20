@@ -1,0 +1,11 @@
+MEDCLAIM SENTINEL v7.3 FAST UI PATCH
+
+1. Stop Streamlit with Ctrl+C.
+2. Copy EVERYTHING inside this folder into your existing medclaim-sentinel folder.
+3. Choose Replace files in destination.
+4. Do not delete the storage folder.
+5. Restart on port 8502:
+
+powershell.exe -ExecutionPolicy Bypass -File .\run_windows.ps1 -Port 8502
+
+Claim 360 now opens without automatically running Ollama or the claim pipeline.

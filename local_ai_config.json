@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "ollama_url": "http://127.0.0.1:11434",
+  "vision_model": "qwen2.5vl:7b",
+  "clinical_model": "qwen2.5vl:7b",
+  "timeout_seconds": 150,
+  "max_image_dimension": 1280,
+  "minimum_evidence_confidence": 0.55,
+  "num_ctx": 8192,
+  "num_predict": 1800,
+  "clinical_attach_images": false,
+  "skip_existing_document_ai": true
+}
