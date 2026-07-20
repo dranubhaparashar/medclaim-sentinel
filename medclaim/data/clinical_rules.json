@@ -1,0 +1,212 @@
+{
+  "version": "3.0.0",
+  "disclaimer": "Decision-support rules only. They do not replace medical-officer review and must not be used as the sole basis for claim rejection.",
+  "diagnosis_concepts": [
+    {
+      "code": "pregnancy_antenatal",
+      "label": "Pregnancy / antenatal care",
+      "keywords": ["pregnancy", "pregnant", "antenatal", "prenatal", "gestation", "गर्भ", "गर्भावस्था"]
+    },
+    {
+      "code": "hypothyroidism",
+      "label": "Hypothyroidism / thyroid hormone deficiency",
+      "keywords": ["hypothyroidism", "hypothyroid", "underactive thyroid", "thyroid deficiency", "raised tsh", "high tsh"]
+    },
+    {
+      "code": "diabetes",
+      "label": "Diabetes mellitus",
+      "keywords": ["diabetes mellitus", "diabetes", "hyperglycemia", "high blood sugar"]
+    },
+    {
+      "code": "gestational_diabetes",
+      "label": "Gestational diabetes",
+      "keywords": ["gestational diabetes", "gdm", "diabetes in pregnancy"]
+    },
+    {
+      "code": "anaemia",
+      "label": "Anaemia / iron deficiency",
+      "keywords": ["anaemia", "anemia", "iron deficiency", "low haemoglobin", "low hemoglobin"]
+    },
+    {
+      "code": "vitamin_b12_deficiency",
+      "label": "Vitamin B12 deficiency",
+      "keywords": ["vitamin b12 deficiency", "b12 deficiency", "low b12"]
+    },
+    {
+      "code": "vitamin_d_deficiency",
+      "label": "Vitamin D deficiency",
+      "keywords": ["vitamin d deficiency", "low vitamin d", "hypovitaminosis d"]
+    },
+    {
+      "code": "urinary_condition",
+      "label": "Urinary condition / UTI",
+      "keywords": ["urinary tract infection", "uti", "urinary symptoms", "proteinuria"]
+    }
+  ],
+  "tests": [
+    {
+      "code": "antenatal_ultrasound",
+      "label": "Antenatal ultrasound / fetal screening",
+      "aliases": ["usg", "gynee screening", "gynae screening", "fhr screening", "nt scan", "nt/nb", "nuchal translucency", "dual marker", "anomaly scan", "level 2 usg"],
+      "supported_diagnoses": ["pregnancy_antenatal"],
+      "relationship": "routine_or_standard_antenatal",
+      "reason": "Ultrasound and prenatal screening investigations are clinically related to antenatal care.",
+      "source_title": "ACOG prenatal genetic screening and ultrasound guidance",
+      "source_url": "https://www.acog.org/womens-health/faqs/prenatal-genetic-screening-tests"
+    },
+    {
+      "code": "cbc",
+      "label": "Complete blood count",
+      "aliases": ["cbc", "complete blood count", "full blood count", "haemogram", "hemogram"],
+      "supported_diagnoses": ["pregnancy_antenatal", "anaemia"],
+      "relationship": "routine_or_diagnostic",
+      "reason": "CBC is routinely used during pregnancy and is also relevant to anaemia assessment.",
+      "source_title": "ACOG routine tests during pregnancy",
+      "source_url": "https://www.acog.org/womens-health/faqs/routine-tests-during-pregnancy"
+    },
+    {
+      "code": "urinalysis",
+      "label": "Urine routine / urinalysis",
+      "aliases": ["urine routine", "urinalysis", "urine test", "urine r/m"],
+      "supported_diagnoses": ["pregnancy_antenatal", "urinary_condition"],
+      "relationship": "routine_or_diagnostic",
+      "reason": "Urine testing is commonly part of antenatal care and can also assess urinary disease.",
+      "source_title": "ACOG routine tests during pregnancy",
+      "source_url": "https://www.acog.org/womens-health/faqs/routine-tests-during-pregnancy"
+    },
+    {
+      "code": "glucose_testing",
+      "label": "Glucose / diabetes testing",
+      "aliases": ["fbs", "fasting blood sugar", "ppbs", "post prandial blood sugar", "sugar ppbs", "glucose", "hba1c", "a1c"],
+      "supported_diagnoses": ["diabetes", "gestational_diabetes"],
+      "conditional_diagnoses": ["pregnancy_antenatal"],
+      "relationship": "screening_or_monitoring",
+      "reason": "Glucose testing may be used to screen for or monitor diabetes, including gestational diabetes. HbA1c requires clinical context and timing review.",
+      "source_title": "ACOG gestational diabetes screening",
+      "source_url": "https://www.acog.org/womens-health/faqs/gestational-diabetes"
+    },
+    {
+      "code": "thyroid_profile",
+      "label": "Thyroid profile",
+      "aliases": ["tsh", "t3", "t4", "thyroid profile", "thyroxine test", "thyroid test"],
+      "supported_diagnoses": ["hypothyroidism"],
+      "conditional_diagnoses": ["pregnancy_antenatal"],
+      "relationship": "diagnostic_or_monitoring",
+      "reason": "Thyroid testing is directly relevant to known or suspected thyroid disease; pregnancy alone is not sufficient to prove a thyroid diagnosis.",
+      "source_title": "American Thyroid Association: hypothyroidism in pregnancy",
+      "source_url": "https://www.thyroid.org/hypothyroidism-in-pregnancy/"
+    },
+    {
+      "code": "vitamin_b12_test",
+      "label": "Vitamin B12 test",
+      "aliases": ["vitamin b12 serum", "b12 serum", "vitamin b12"],
+      "supported_diagnoses": ["vitamin_b12_deficiency", "anaemia"],
+      "conditional_diagnoses": ["pregnancy_antenatal"],
+      "relationship": "diagnostic",
+      "reason": "Vitamin B12 testing requires a deficiency, anaemia, nutritional or neurological indication; pregnancy alone is only contextual support.",
+      "source_title": "Clinical context required",
+      "source_url": ""
+    },
+    {
+      "code": "vitamin_d_test",
+      "label": "Vitamin D test",
+      "aliases": ["vitamin d total", "25-oh vitamin d", "25 oh vitamin d", "vitamin d serum"],
+      "supported_diagnoses": ["vitamin_d_deficiency"],
+      "conditional_diagnoses": ["pregnancy_antenatal"],
+      "relationship": "diagnostic",
+      "reason": "Vitamin D testing is most directly supported by suspected deficiency or a documented risk factor; pregnancy alone is contextual rather than conclusive.",
+      "source_title": "Clinical context required",
+      "source_url": ""
+    }
+  ],
+  "medicines": [
+    {
+      "code": "levothyroxine",
+      "generic_name": "Levothyroxine",
+      "aliases": ["levothyroxine", "thyroxine tablet", "thyronorm", "eltroxin", "levoxyl", "synthroid"],
+      "supported_diagnoses": ["hypothyroidism"],
+      "conditional_diagnoses": ["pregnancy_antenatal"],
+      "reason": "Levothyroxine treats hypothyroidism. Pregnancy may change dose requirements, but pregnancy alone does not establish the indication.",
+      "required_evidence": "Documented hypothyroidism or thyroid-function evidence, plus prescriber details.",
+      "source_title": "American Thyroid Association: hypothyroidism in pregnancy",
+      "source_url": "https://www.thyroid.org/hypothyroidism-in-pregnancy/"
+    },
+    {
+      "code": "folic_acid",
+      "generic_name": "Folic acid",
+      "aliases": ["folic acid", "folate", "folvite"],
+      "supported_diagnoses": ["pregnancy_antenatal", "anaemia"],
+      "conditional_diagnoses": [],
+      "reason": "Folic acid is clinically related to antenatal supplementation and folate-deficiency states.",
+      "required_evidence": "Readable prescription and itemized pharmacy bill.",
+      "source_title": "WHO iron and folic acid supplementation during pregnancy",
+      "source_url": "https://www.who.int/tools/elena/interventions/daily-iron-pregnancy"
+    },
+    {
+      "code": "iron_supplement",
+      "generic_name": "Iron supplement",
+      "aliases": ["ferrous sulfate", "ferrous sulphate", "ferrous fumarate", "ferrous ascorbate", "iron tablet", "iron supplement"],
+      "supported_diagnoses": ["pregnancy_antenatal", "anaemia"],
+      "conditional_diagnoses": [],
+      "reason": "Iron supplementation is clinically related to antenatal care and iron-deficiency anaemia.",
+      "required_evidence": "Readable prescription and itemized pharmacy bill.",
+      "source_title": "WHO iron and folic acid supplementation during pregnancy",
+      "source_url": "https://www.who.int/tools/elena/interventions/daily-iron-pregnancy"
+    },
+    {
+      "code": "calcium_supplement",
+      "generic_name": "Calcium supplement",
+      "aliases": ["calcium carbonate", "calcium citrate", "calcium tablet", "calcium supplement"],
+      "supported_diagnoses": ["pregnancy_antenatal"],
+      "conditional_diagnoses": [],
+      "reason": "Calcium supplementation may be used in pregnancy depending on diet, risk and local guidance.",
+      "required_evidence": "Readable prescription and itemized pharmacy bill.",
+      "source_title": "WHO antenatal care recommendations",
+      "source_url": "https://www.who.int/news/item/07-11-2016-new-guidelines-on-antenatal-care-for-a-positive-pregnancy-experience"
+    },
+    {
+      "code": "vitamin_d_supplement",
+      "generic_name": "Vitamin D",
+      "aliases": ["cholecalciferol", "calcitriol", "vitamin d3", "vitamin d tablet", "vitamin d capsule"],
+      "supported_diagnoses": ["vitamin_d_deficiency"],
+      "conditional_diagnoses": ["pregnancy_antenatal"],
+      "reason": "Vitamin D treatment is most directly supported by deficiency or a documented supplementation plan.",
+      "required_evidence": "Prescription plus deficiency result or antenatal supplementation plan.",
+      "source_title": "Clinical context required",
+      "source_url": ""
+    },
+    {
+      "code": "vitamin_b12_supplement",
+      "generic_name": "Vitamin B12",
+      "aliases": ["cyanocobalamin", "methylcobalamin", "mecobalamin", "vitamin b12 tablet", "vitamin b12 injection"],
+      "supported_diagnoses": ["vitamin_b12_deficiency", "anaemia"],
+      "conditional_diagnoses": ["pregnancy_antenatal"],
+      "reason": "Vitamin B12 treatment is most directly supported by deficiency, anaemia or a documented nutritional indication.",
+      "required_evidence": "Prescription and supporting diagnosis or laboratory result.",
+      "source_title": "Clinical context required",
+      "source_url": ""
+    },
+    {
+      "code": "metformin",
+      "generic_name": "Metformin",
+      "aliases": ["metformin", "glycomet", "glucophage"],
+      "supported_diagnoses": ["diabetes", "gestational_diabetes"],
+      "conditional_diagnoses": [],
+      "reason": "Metformin is used in diabetes; use during pregnancy requires prescriber and medical-officer context.",
+      "required_evidence": "Diabetes diagnosis and readable prescription.",
+      "source_title": "ACOG diabetes in pregnancy information",
+      "source_url": "https://www.acog.org/womens-health/faqs/pregnancy-with-type-1-or-type-2-diabetes"
+    },
+    {
+      "code": "insulin",
+      "generic_name": "Insulin",
+      "aliases": ["insulin", "human insulin", "insulin lispro", "insulin aspart", "insulin glargine"],
+      "supported_diagnoses": ["diabetes", "gestational_diabetes"],
+      "conditional_diagnoses": [],
+      "reason": "Insulin is clinically related to diabetes treatment, including selected pregnancy cases.",
+      "required_evidence": "Diabetes diagnosis, dose and readable prescription.",
+      "source_title": "ACOG diabetes in pregnancy information",
+      "source_url": "https://www.acog.org/womens-health/faqs/pregnancy-with-type-1-or-type-2-diabetes"
+    }
+  ]
+}
